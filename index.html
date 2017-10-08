@@ -10,20 +10,27 @@
     <h2>Two-way temperature convertion</h2>
     <h3>Please chose a conversion</h3>
     <form>
-        <table>
-            <tr>
-                <tr>Fahrenheit</tr>
-                <tr>Celsius</tr>
-            </tr>
-            <tr>
-                <td>input type="text" id="far" onchange="tempConvert('F')" size="10" maxlength="10" /></td>
-                <br>
-                <td>input type="text" id="cel" onchange="tempConvert('C')" size="10" maxlength="10" /></td>
-                <br>
-            </tr>
-        </table>
-        
+        <fieldset>
+                <label for="Fahrenheit">
+                    Enter temperature in Fahrenheit
+                </label>
+                <input type="number" id="far" onchange="tempConvert('F')">
 
+                <label for="Celsius">
+                    Enter temperature in Celsius
+                </label>
+                <input type="number" id="cel" onchange="tempConvert('C')">
+        </fieldset>
+        <fieldset>
+            <button type="button" id="button">Convert</button>
+        </fieldset>
+        <fieldset>
+            <p>Temperature in Celsius</p>
+            <p id="Celsius"></p>
+            <p>Temperature in Fahrenheit</p>
+            <p id="Fahrenheit"></p>
+        </fieldset>
+    </form>      
 
     <script src="script.js"></script>
 

@@ -1,33 +1,34 @@
-function tempConvert(type) {
-    var docF = document.getElementById("far");
-    var docC = document.getElementById("cel");
-    var temp;
+let Calculate = (num1, num2, degrees) => {
+let answer = "",
 
-}
-let Calculate = (input1, input2, degrees) => {
-    let answer = "";
-    switch (degree) {
-        case(""):
-        answer = 
+    switch (degrees) {
+        case 'F':
+        tempF = Number(num1.value);    
+        tempC = (tempF - 32) * 1.8;
+        break;
 
+        case 'C':
+        tempC = Number(num2.value);  
+        tempF = (tempC * 1.8) + 32;
+        break;
+
+        default:
+        answer = 'No valid operator was supplied'
+        break
     }
-}
-
-switch (type) {
-    case 'F':
-    tempF = Number(docF.value);
-    docF.style.backgroundColor = '#fff'
-    tempC = (tempF - 32) * 1.8;
-    break;
-    case 'C':
-    tempC = Number(docC.value);
-    docC.style.backgroundColor = '#fff'
-    tempF = (tempC * 1.8) + 32;
-    break;
-    default:
+        return answer
     
 
 }
 
-docF.value = tempF;
-docC.value = tempC;
+function tempConvert(type) {
+    var num1 = document.getElementById("far");
+    var num2 = document.getElementById("cel");
+    var temp;
+    document.getElementById("result").innerHTML
+}
+
+num1.value = tempF;
+num2.value = tempC;
+
+
