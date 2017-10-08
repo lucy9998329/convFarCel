@@ -21,13 +21,24 @@ let answer = "",
 
 }
 
-function tempConvert(type) {
-    var num1 = document.getElementById("far");
-    var num2 = document.getElementById("cel");
-    var temp;
+
+    let num1 = document.getElementById("far");
+    let num2 = document.getElementById("cel");
+    let temp;
+    let convert = document.getElementById("convert")
     document.getElementById("result").innerHTML
+
+    let farresult = document.getElementById("farresult")
+    let celresult = document.getElementById("celresult")
+ 
+ function tempConvert(degrees) 
+let convertForm = () =>
+{
+    farresult.innerHTML = far.value
+    celresult.innerHTML = cel.value
 }
 
+convert.addEventListener('click', (e) => {convertForm(); e.preventDefault()})
 num1.value = tempF;
 num2.value = tempC;
 
