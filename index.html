@@ -11,24 +11,24 @@
     <h3>Please chose a conversion</h3>
     <form>
         <fieldset>
-                <label for="Fahrenheit">
-                    Enter temperature in Fahrenheit
+                <label>
+                    Enter in temperature value
                 </label>
-                <input type="number" id="far" onchange="tempConvert('F')">
+                <input type="number" id="far">
 
-                <label for="Celsius">
-                    Enter temperature in Celsius
+                <label>
+                    Enter in F for Fahrenheit or C for Celsius
                 </label>
-                <input type="number" id="cel" onchange="tempConvert('C')">
+                <input type="text" id="cel">
         </fieldset>
         <fieldset>
-            <button type="button" id="button">Convert</button>
+            <button type="button" id="submit">Convert</button>
         </fieldset>
         <fieldset>
-            <p>Temperature in Celsius</p>
-            <p id="Celsius"></p>
-            <p>Temperature in Fahrenheit</p>
-            <p id="Fahrenheit"></p>
+        
+            <p id="celsius"></p>
+            
+            <p id="fahrenheit"></p>
         </fieldset>
     </form>
 

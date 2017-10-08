@@ -1,45 +1,35 @@
-let Calculate = (num1, num2, degrees) => {
-let answer = "",
+//declare variables
+let far = document.querySelector("#far")
+let cel = document.querySelector("#cel")
+
+let submit =  document.querySelector("#submit")
+
+let fahrenheit = document.querySelector("#fahrenheit")
+let celsius = document.querySelector("#celsius")
+
+
+//create a function to calculate conversion 
+let Calculate = (num1, degrees) => {
+let answer = "";
 
     switch (degrees) {
-        case 'F':
-        tempF = Number(num1.value);    
-        tempC = (tempF - 32) * 1.8;
-        break;
+        case 'F': 
+        answer = `${(parseFloat(num1) * (9 / 5) + 32)} Celsius` ;
+        break;             
+        
 
         case 'C':
-        tempC = Number(num2.value);  
-        tempF = (tempC * 1.8) + 32;
+        answer = `${(parseFloat(num1) - 32) * (5 / 9)} Fahrenheit` ;
         break;
 
         default:
         answer = 'No valid operator was supplied'
         break
     }
-        return answer
-    
-
+        
+    return answer
 }
 
 
-    let num1 = document.getElementById("far");
-    let num2 = document.getElementById("cel");
-    let temp;
-    let convert = document.getElementById("convert")
-    document.getElementById("result").innerHTML
 
-    let farresult = document.getElementById("farresult")
-    let celresult = document.getElementById("celresult")
- 
- function tempConvert(degrees) 
-let convertForm = () =>
-{
-    farresult.innerHTML = far.value
-    celresult.innerHTML = cel.value
-}
-
-convert.addEventListener('click', (e) => {convertForm(); e.preventDefault()})
-num1.value = tempF;
-num2.value = tempC;
-
-
+submit.addEventListener('click', (e) => {celsius.innerHTML = Calculate(far.value, cel.value); e.preventDefault()})
